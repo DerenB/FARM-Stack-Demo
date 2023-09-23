@@ -38,3 +38,15 @@ import os
 load_dotenv()
 connection_string = os.getenv("ConnectionString")
 ```
+
+# Step 2: Setup Frontend
+
+### Install Items
+
+- `npx create-react-app frontend`
+- Install Items:
+  - `npm install axios`
+  - `npm install bootstrap`
+- Add Bootstrap import
+  - Added to `index.js` file
+  - Line: `import '../node_modules/bootstrap/dist/css/bootstrap.min.css';`
