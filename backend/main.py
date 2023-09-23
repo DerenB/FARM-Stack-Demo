@@ -56,7 +56,7 @@ async def post_todo(todo:Todo):
     raise HTTPException(400, "Something went wrong dingdong, bad request")
 
 # Update
-@app.put("/api/todo{title}/", response_model=Todo)
+@app.put("/api/todo/{title}/", response_model=Todo)
 async def put_todo(title:str, desc:str):
     response = await update_todo(title, desc)
     if response:
@@ -64,7 +64,7 @@ async def put_todo(title:str, desc:str):
     raise HTTPException(404, f"There is no Todo item with this title {title}")
 
 # Delete
-@app.delete("/api/todo{title}")
+@app.delete("/api/todo/{title}/")
 async def delete_todo(title):
     response = await remove_todo(title)
     if response:

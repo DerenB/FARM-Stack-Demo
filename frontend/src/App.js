@@ -30,7 +30,7 @@ function App() {
       .then(res => {
         setTodoList(res.data)
       })
-  });
+  }, []);
 
   // Post a Todo
   const addTodoHandler = () => {
